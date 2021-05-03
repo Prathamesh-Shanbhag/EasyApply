@@ -1,4 +1,6 @@
 var fetch = require('node-fetch');
+const redis = require('redis');
+const client = redis.createClient();
 
 const baseURL = 'https://jobs.github.com/positions.json';
 
