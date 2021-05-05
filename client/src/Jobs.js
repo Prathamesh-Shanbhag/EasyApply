@@ -5,12 +5,32 @@ import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import { useState } from 'react';
+import JobModal from './JobModal';
+import { job } from 'cron';
 
 export default function Jobs({ jobs }) {
+  if (!job.title) {
+    return <div></div>;
+  }
+
+  // Modal
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  // Pagination
+
   const numJobs = jobs.length;
   const numPages = Math.ceil(numJobs / 50);
 
   const [activeStep, setActiveStep] = useState(0);
+  const [selectedJob, setSelectedJob] = useState({});
   const jobsOnPage = jobs.slice(activeStep * 50, activeStep * 50 + 50);
 
   const handleNext = () => {
@@ -22,6 +42,7 @@ export default function Jobs({ jobs }) {
   };
   return (
     <div className='jobs'>
+      <JobModal open={open} job={selectedJob} />
       <Typography variant='h4' component='h1'>
         Entry Level Software Jobs
       </Typography>
@@ -29,7 +50,7 @@ export default function Jobs({ jobs }) {
         Found {numJobs} Jobs.
       </Typography>
       {jobsOnPage.map((job, i) => (
-        <Job key={i} job={job} />
+        <Job key={i} job={job} onClick={() => setSelectedJob(job)} />
       ))}
       <div>
         Page {activeStep + 1} of {numPages}
