@@ -6,13 +6,8 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import { useState } from 'react';
 import JobModal from './JobModal';
-import { job } from 'cron';
 
 export default function Jobs({ jobs }) {
-  if (!job.title) {
-    return <div></div>;
-  }
-
   // Modal
   const [open, setOpen] = useState(false);
 
@@ -42,7 +37,7 @@ export default function Jobs({ jobs }) {
   };
   return (
     <div className='jobs'>
-      <JobModal open={open} job={selectedJob} />
+      <JobModal open={open} job={selectedJob} handleClose={handleClose} />
       <Typography variant='h4' component='h1'>
         Entry Level Software Jobs
       </Typography>
@@ -50,7 +45,14 @@ export default function Jobs({ jobs }) {
         Found {numJobs} Jobs.
       </Typography>
       {jobsOnPage.map((job, i) => (
-        <Job key={i} job={job} onClick={() => setSelectedJob(job)} />
+        <Job
+          key={i}
+          job={job}
+          onClick={() => {
+            handleClickOpen();
+            setSelectedJob(job);
+          }}
+        />
       ))}
       <div>
         Page {activeStep + 1} of {numPages}

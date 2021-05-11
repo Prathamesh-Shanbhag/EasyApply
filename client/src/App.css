@@ -16,6 +16,10 @@ body {
   cursor: pointer;
   color: #666666;
 }
+.detail-logo {
+  height: 30px;
+  float: right;
+}
 
 .job-company {
   padding: 0 30px;

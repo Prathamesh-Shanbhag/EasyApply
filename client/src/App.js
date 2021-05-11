@@ -1,6 +1,10 @@
 import './App.css';
 import Jobs from './Jobs';
 import './App.css';
+import Home from './Home';
+import { BrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
 import { useEffect, useState } from 'react';
 const JOB_API_URL = 'http://localhost:3001/jobs';
 // const mockJobs = [
@@ -23,7 +27,14 @@ function App() {
 
   return (
     <div className='App'>
-      <Jobs jobs={jobsList} />
+      <BrowserRouter>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/Jobs'>
+          <Jobs jobs={jobsList} />
+        </Route>
+      </BrowserRouter>
     </div>
   );
 }
