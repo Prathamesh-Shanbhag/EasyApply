@@ -45,15 +45,27 @@ export default function Home() {
           {/* <!-- end of nav bar links  -->
           <!-- nav social  --> */}
           <div class='nav-icons'>
-            <a href='https://www.facebook.com' target='_blank'>
+            <a
+              href='https://www.facebook.com'
+              target='_blank'
+              rel=' noopener noreferrer'
+            >
               <i class='fab fa-facebook nav-icon'></i>
             </a>
 
-            <a href='https://www.twitter.com' target='_blank'>
+            <a
+              href='https://www.twitter.com'
+              target='_blank'
+              rel=' noopener noreferrer'
+            >
               <i class='fab fa-twitter nav-icon'></i>
             </a>
 
-            <a href='https://www.instagram.com' target='_blank'>
+            <a
+              href='https://www.instagram.com'
+              target='_blank'
+              rel=' noopener noreferrer'
+            >
               <i class='fab fa-instagram nav-icon'></i>
             </a>
           </div>
