@@ -43,7 +43,7 @@ export default function Jobs({ jobs }) {
       <div className='jobs-container'>
         <div className='jobs'>
           <JobModal open={open} job={selectedJob} handleClose={handleClose} />
-          <Typography variant='h4' component='h1' primary='white'>
+          <Typography variant='h4' component='h1'>
             Entry Level Software Jobs
           </Typography>
           <Typography variant='h6' component='h2'>

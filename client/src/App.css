@@ -20,12 +20,12 @@
   cursor: pointer;
   color: #666666;
 }
-.detail-logo {
-  height: 30px;
+.detailed-logo {
+  height: 100px;
+  float: right;
 }
 .modal {
   display: flex;
-  flex-direction: row;
 }
 .job-company {
   padding: 0 30px;
@@ -34,6 +34,14 @@
   padding: 30px 50px;
 }
 .MuiTypography-h4,
-.MuiTypography-h6 {
+.MuiTypography-h6,
+.MuiTypography-h5 {
   color: antiquewhite;
+}
+.text_black {
+  color: #232427 !important;
+}
+.text_white {
+  color: #fff;
+  float: right;
 }

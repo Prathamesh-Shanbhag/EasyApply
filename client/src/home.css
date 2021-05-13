@@ -37,10 +37,7 @@ body {
 }
 
 /**********************Global styles*************************/
-img:not(.nav-logo) {
-  width: 100%;
-  display: block;
-}
+
 h1,
 h2,
 h3,
@@ -460,7 +457,9 @@ a {
 
 .card-content {
   padding: 20px;
-  text-align: center;
+  text-align: left;
+  /* display: flex;
+  flex-direction: row; */
 }
 
 .card-title {
