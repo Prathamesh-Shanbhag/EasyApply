@@ -1,7 +1,11 @@
 .jobs-container {
-  margin: 20px 40px !important;
-  margin-left: 40px;
   padding-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: #232427;
 }
 .job {
   width: 80%;
@@ -18,12 +22,18 @@
 }
 .detail-logo {
   height: 30px;
-  float: right;
 }
-
+.modal {
+  display: flex;
+  flex-direction: row;
+}
 .job-company {
   padding: 0 30px;
 }
 .job-dialog {
   padding: 30px 50px;
+}
+.MuiTypography-h4,
+.MuiTypography-h6 {
+  color: antiquewhite;
 }
