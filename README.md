@@ -1,2 +1,2 @@
 # EasyApply
- A Job Board for Jr Dev Jobs.
+A Job-Board App for Junior or Entry Level Tech Jobs
