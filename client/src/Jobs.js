@@ -1,4 +1,4 @@
-import Typography from '@material-ui/core/Typography';
+import { Typography } from '@material-ui/core';
 import Job from './Job';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import Button from '@material-ui/core/Button';
@@ -43,12 +43,14 @@ export default function Jobs({ jobs }) {
       <div className='jobs-container'>
         <div className='jobs'>
           <JobModal open={open} job={selectedJob} handleClose={handleClose} />
-          <Typography variant='h4' component='h1'>
-            Entry Level Software Jobs
-          </Typography>
-          <Typography variant='h6' component='h2'>
-            Found {numJobs} Jobs.
-          </Typography>
+          <div className='heading'>
+            <Typography variant='h4' component='h1'>
+              Entry Level Software Jobs
+            </Typography>
+            <Typography variant='h6' component='h2'>
+              Found {numJobs} Jobs.
+            </Typography>
+          </div>
           {jobsOnPage.map((job, i) => (
             <Job
               key={i}

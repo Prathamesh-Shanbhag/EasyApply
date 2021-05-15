@@ -139,10 +139,14 @@ a {
 .navbar {
   width: 100%;
   background-color: #0a66c2;
+  height: 5rem;
 }
 .nav-logo {
   padding: none;
   cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 0;
 }
 
 .nav-header {
@@ -171,7 +175,6 @@ a {
 }
 .nav-link {
   display: block;
-  padding: 1rem 2rem;
   color: var(--mainWhite);
   font-family: 'Russo One';
   font-size: large;
@@ -210,12 +213,13 @@ a {
     width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
   }
   .nav-header {
     padding: 0;
+    margin-right: 5rem;
   }
   .nav-link {
     padding: 0;
@@ -250,47 +254,17 @@ a {
   }
 }
 
-/* .fixed-nav .links-container {
-  height: auto !important;
-} */
-
-/* fixed navbar  */
-.fixed-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #612328;
-  transition: var(--mainTransition);
-  box-shadow: var(--lightShadow);
-  z-index: 10;
-}
-
 .links-container {
   height: 0;
   overflow: hidden;
   transition: var(--mainTransition);
+  display: flex;
+  justify-content: space-between;
 }
 .show-links {
   height: 290px;
 }
-/* Back To Top Button  */
-.top-link {
-  font-size: 1.25rem;
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  background: var(--primaryCol);
-  width: 2rem;
-  height: 2rem;
-  display: grid;
-  place-items: center;
-  border-radius: 0.5rem;
-  color: var(--mainBlack);
-  animation: bounce 2s ease-in-out infinite;
-  visibility: hidden;
-  z-index: -100;
-}
+
 .show-link {
   visibility: visible;
   z-index: 100;

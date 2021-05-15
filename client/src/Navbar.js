@@ -4,46 +4,41 @@ import image from './assets/ealogo.png';
 
 function Navbar() {
   return (
-    <nav class='navbar' id='nav'>
-      <div class='nav-center'>
+    <nav className='navbar' id='nav'>
+      <div className='nav-center'>
         {/* <!-- nav header  --> */}
-        <div class='nav-header'>
+        <div className='nav-header'>
           <a href='#home'>
-            <img src={image} alt='EasyApplylogo' class='nav-logo' />
+            <img src={image} alt='EasyApplylogo' className='nav-logo' />
           </a>
-          <button
-            type='button'
-            class='nav-toggle'
-            id='nav-toggle'
-            aria-label='nav-toggler'
-          >
-            <i class='fas fa-bars'></i>
-          </button>
         </div>
         {/* <!-- end of navbar header  -->
           <!-- navbar links  --> */}
-        <div class='links-container'>
-          <div class='nav-links'>
-            <a href='#home' class='nav-link scroll-link'>
+        <div className='links-container'>
+          <div className='nav-links'>
+            <NavLink className='nav-link scroll-link' to='/' exact>
               Home
-            </a>
+            </NavLink>
             <NavLink className='nav-link scroll-link' to='/Jobs' exact>
               Apply
             </NavLink>
-            <a href='./diet/pages/signin.html' class='nav-link scroll-link'>
+            <a href='#home' className='nav-link scroll-link'>
               Login
+            </a>
+            <a href='#home' className='nav-link scroll-link'>
+              About
             </a>
           </div>
         </div>
         {/* <!-- end of nav bar links  -->
           <!-- nav social  --> */}
-        <div class='nav-icons'>
+        <div className='nav-icons'>
           <a
             href='https://www.facebook.com'
             target='_blank'
             rel=' noopener noreferrer'
           >
-            <i class='fab fa-facebook nav-icon'></i>
+            <i className='fab fa-facebook nav-icon'></i>
           </a>
 
           <a
@@ -51,7 +46,7 @@ function Navbar() {
             target='_blank'
             rel=' noopener noreferrer'
           >
-            <i class='fab fa-twitter nav-icon'></i>
+            <i className='fab fa-twitter nav-icon'></i>
           </a>
 
           <a
@@ -59,7 +54,7 @@ function Navbar() {
             target='_blank'
             rel=' noopener noreferrer'
           >
-            <i class='fab fa-instagram nav-icon'></i>
+            <i className='fab fa-instagram nav-icon'></i>
           </a>
         </div>
       </div>

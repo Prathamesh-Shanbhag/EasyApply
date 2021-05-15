@@ -33,7 +33,7 @@
 .job-dialog {
   padding: 30px 50px;
 }
-.MuiTypography-h4,
+
 .MuiTypography-h6,
 .MuiTypography-h5 {
   color: antiquewhite;
@@ -44,4 +44,14 @@
 .text_white {
   color: #fff;
   float: right;
+}
+.heading {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.MuiTypography-h4 {
+  color: #fff;
+  text-decoration: underline;
 }

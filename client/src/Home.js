@@ -1,6 +1,6 @@
 import './home.css';
 import { NavLink } from 'react-router-dom';
-import videos from './assets/vid.mp4';
+import videos from './assets/EasyApply.mp4';
 import Typing from './Typing.js';
 import Navbar from './Navbar';
 export default function Home() {
@@ -15,8 +15,7 @@ export default function Home() {
       <div class='hero'>
         <div class='hero-banner'>
           <h1 class='hero-title'>
-            Achieve
-            <span>&nbsp;</span>
+            Become a<span>&nbsp;</span>
             <Typing className='typing' />
           </h1>
           {/* <p class='hero-text'></p> */}
