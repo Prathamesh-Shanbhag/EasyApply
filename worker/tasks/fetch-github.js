@@ -1,5 +1,6 @@
 var fetch = require('node-fetch');
 const redis = require('redis');
+const redisjson = require('ioredis');
 const client = redis.createClient();
 const { promisify } = require('util');
 const setAsync = promisify(client.set).bind(client);
@@ -34,7 +35,7 @@ async function fetchGithub() {
     }
     return true;
   });
-  console.log('Filtered down to', jrJobs.length);
+  console.log(`Filtered down to, ${jrJobs.length} using ${redisjson}`);
 
   // Redis Setting Jobs
   const success = await setAsync('github', JSON.stringify(jrJobs));
