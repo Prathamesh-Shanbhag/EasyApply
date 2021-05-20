@@ -7,7 +7,7 @@
   "contributed_by": "Prathamesh Shanbhag",
   "repo_url": "https://github.com/Prathamesh-Shanbhag/EasyApply",
   "download_url": "https://codeload.github.com/Prathamesh-Shanbhag/EasyApply/zip/refs/heads/main",
-  "hosted_url": "",
+  "hosted_url": "https://easy-apply.vercel.app/",
   "quick_deploy": "false",
   "language": [
     "Backend technologies: Node.js,RedisJSON,Front-End Technologies:Reactjs"
