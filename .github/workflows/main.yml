@@ -14,7 +14,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-
-      # Runs a single command using the runners shell
-      - name: Run Fetch-Jobs
-        run: node api/iindex.js
+      - run: npm install
+      - name: Run script
+        run: node api/index.js
+        env:
+          SECRET_TEST_MESSAGE: ${{ secrets.SECRET_TEST_MESSAGE }}
