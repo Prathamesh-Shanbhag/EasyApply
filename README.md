@@ -6,6 +6,9 @@ Download [Node.js](https://nodejs.org/en/download/).
 Run this followed commands:
 
 ``` bash
+# Change Directory into the Client Folder
+cd client
+
 # Install dependencies (only the first time)
 npm install
 
